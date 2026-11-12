@@ -6,8 +6,8 @@ study assistant. This tap installs the release DMG from GitHub. It needs an Appl
 ## Install
 
 ```sh
-brew tap devfirmino/learntranscriber
-brew trust devfirmino/learntranscriber
+brew tap learntranscriber/tap
+brew trust learntranscriber/tap
 brew install --cask learntranscriber
 ```
 
