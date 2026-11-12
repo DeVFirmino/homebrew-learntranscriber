@@ -1,4 +1,4 @@
-# brew tap-new uses this file to generate an autobump workflow for the new tap
+# Opens a pull request when a new LearnTranscriber release appears on GitHub.
 name: brew bump
 
 on:
@@ -32,10 +32,10 @@ jobs:
         id: git_setup
         uses: Homebrew/actions/git-user-config@4790763c0a3ba4036f72634dc079c4a7dfcd4878 # 2026.10.19.1
 
-      - name: Bump formulae
+      - name: Bump casks
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HOMEBREW_GIT_COMMITTER_NAME: ${{ steps.git_setup.outputs.name }}
           HOMEBREW_GIT_COMMITTER_EMAIL: ${{ steps.git_setup.outputs.email }}
           TAP_NAME: ${{ steps.set-up-homebrew.outputs.tap-name }}
-        run: brew bump --no-fork --open-pr --formulae --bump-synced --tap="$TAP_NAME"
+        run: brew bump --no-fork --open-pr --casks --tap="$TAP_NAME"
