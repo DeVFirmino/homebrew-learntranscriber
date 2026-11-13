@@ -20,7 +20,8 @@ defaults:
 
 jobs:
   autobump:
-    runs-on: ubuntu-latest
+    # brew audits the new version by mounting its DMG with hdiutil, which only macOS has.
+    runs-on: macos-26
     permissions:
       contents: write
       pull-requests: write
