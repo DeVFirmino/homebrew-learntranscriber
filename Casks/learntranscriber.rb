@@ -1,6 +1,6 @@
 cask "learntranscriber" do
-  version "0.1.2"
-  sha256 "b448afe381ceae4fec80f1e349647df500d6d20d06793b8e0dc339895d209133"
+  version "0.1.3"
+  sha256 "178e6f7c4608baa4dc0f3956208af39b8724069bf4344416d194e24a90655cf9"
 
   url "https://github.com/DeVFirmino/learntranscriber/releases/download/v#{version}/LearnTranscriber-arm64.dmg"
   name "LearnTranscriber"
